@@ -53,7 +53,7 @@ model = keras.Sequential(
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 # Train the model
-model.fit(train_generator, validation_data=validation_generator, epochs=30)
+model.fit(train_generator, validation_data=validation_generator, epochs=20)
 
 # Save the trained model
 model.save("emotion_recognition_model.h5")
