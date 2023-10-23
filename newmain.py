@@ -56,10 +56,10 @@ model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accur
 model.fit(train_generator, validation_data=validation_generator, epochs=20)
 
 # Save the trained model
-model.save("emotion_recognition_model.h5")
+model.save("emotion_recognition_model.keras")
 
 # Load the trained model for implementation
-loaded_model = keras.models.load_model("emotion_recognition_model.h5")
+loaded_model = keras.models.load_model("emotion_recognition_model.keras")
 
 # Implement the model on test data
 y_pred = loaded_model.predict(test_generator)
